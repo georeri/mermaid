@@ -14,7 +14,7 @@ const watch = process.argv.includes('--watch');
 const mermaidOnly = process.argv.includes('--mermaid');
 const coverage = process.env.VITE_COVERAGE === 'true';
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
-const sourcemap = false;
+const sourcemap = true;
 
 type OutputOptions = Exclude<
   Exclude<InlineConfig['build'], undefined>['rollupOptions'],
